@@ -12,6 +12,7 @@ start:
 
 	if (num1 < 0)
 		printf("Value: %d is negative. \n", count);
+		goto start;
 	else{
 		num2=sqrt(num1);
 		printf("SquareRoot of %f is %f\n", num1, num2);
