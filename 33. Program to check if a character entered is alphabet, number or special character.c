@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Program to check if a character entered is number, alphabet or special character.
 int main(){
 
 	char input;
@@ -9,23 +10,25 @@ int main(){
 
 	int asciicode=(int)input;
 
-	if ( asciicode == 32 ){
+	if ( asciicode == 32 )
+	{
 		printf("You entered a blank Space\n");
 		return 0;
-	} else if ( asciicode <= 32 && asciicode >= 126 ){
+	}
+	else if ( asciicode <= 32 && asciicode >= 126 )
 		printf("Ummm, Sorry! Unknown Character.\n");
-	}
 
+	// Print character in a coloured box.
 	printf("\n\e[1;30;43m %c \e[0m is a ", input);
-	if ( asciicode >= 65 && asciicode <= 90 ){
+
+	if ( asciicode >= 65 && asciicode <= 90 )
 		printf("Capital Alphabet\n");
-	} else if ( asciicode >= 97 && asciicode <= 122 ){
+	else if ( asciicode >= 97 && asciicode <= 122 )
 		printf("Small Alphabet\n");
-	} else if ( asciicode >= 48 && asciicode <= 57 ){
+	else if ( asciicode >= 48 && asciicode <= 57 )
 		printf("Number\n");
-	} else if ( (asciicode >= 33 && asciicode <= 47) || (asciicode >= 58 && asciicode <= 64) || (asciicode >= 91 && asciicode <= 96) || (asciicode >= 123 && asciicode <= 136)){
+	else if ( (asciicode >= 33 && asciicode <= 47) || (asciicode >= 58 && asciicode <= 64) || (asciicode >= 91 && asciicode <= 96) || (asciicode >= 123 && asciicode <= 136))
 		printf("Special Character\n");
-	}
 
 
 	return 0;
